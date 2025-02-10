@@ -15,7 +15,7 @@ hours = st.number_input("Total available study hours:", min_value=1, max_value=5
 if st.button("Generate Study Plan"):
     if subjects and hours:
         input_data = {"subjects": subjects, "hours": hours}
-        response = client.flow.execute("akshit/StudyPlanner", input_data)
+        response = client.flow.execute("gazal-sh/StudyPlanner", input_data)
         st.write(response.get("result", "No response from Mira AI"))
     else:
         st.warning("Please enter subjects and hours.")
